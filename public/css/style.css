@@ -116,6 +116,12 @@
 .paragraph {
 	font-size: 1.6rem;
 }
+
+.paragraph-bold {
+	font-size: 1.6rem;
+	font-weight: 600;
+	color: black;
+}
 .paragraph:not(:last-child) {
 	margin-bottom: 3rem;
 }
@@ -269,16 +275,22 @@ header {
 }
 .composition__photo--p1 {
 	left: 0;
-	top: -2rem;
-	z-index: 20;
+	top: -6rem;
+	/* z-index: 20; */
 }
 .composition__photo--p2 {
 	left: 65%;
-	top: 2rem;
+	top: -2rem;
+	/* z-index: 12; */
 }
 .composition__photo--p3 {
-	left: 35%;
-	top: 10rem;
+	left: 65%;
+	top: 24rem;
+}
+
+.composition__photo--p4 {
+	left: 0;
+	top: 20rem;
 }
 .composition__photo:hover {
 	outline: 1.5rem solid #2f00e9;
