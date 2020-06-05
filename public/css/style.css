@@ -91,20 +91,11 @@
 }
 
 .heading-secondary {
-	font-weight: 700;
+	font-weight: 600;
 	font-size: 3.5rem;
-	text-transform: uppercase;
-	display: inline-block;
-	background-image: linear-gradient(to right, #7ed56f, #28b485);
-	-webkit-background-clip: text;
-	background-clip: text;
-	color: transparent;
-	transition: all 0.2s;
+	backface-visibility: hidden;
+	color: black;
 	letter-spacing: 0.2rem;
-}
-.heading-secondary:hover {
-	transform: skewY(2deg) skewX(15deg) scale(1.1);
-	text-shadow: 0.5rem 1rem 2rem rgba(0, 0, 0, 0.2);
 }
 
 .heading-tertiary {
@@ -117,6 +108,12 @@
 	font-size: 1.6rem;
 }
 
+.paragraph-lato {
+	font-family: "Lato", sans-serif;
+	color: #777;
+	font-size: 1.6rem;
+	letter-spacing: 2.5%;
+}
 .paragraph-bold {
 	font-size: 1.6rem;
 	font-weight: 600;
@@ -300,6 +297,87 @@ header {
 }
 .composition:hover .composition__photo:not(:hover) {
 	transform: scale(0.95);
+}
+
+.section__register {
+	height: 100vh;
+}
+
+.img-register {
+	height: 50rem;
+	width: 50rem;
+	transform: translate(-6rem, -6rem);
+}
+
+.h2-register {
+	transform: translate(5rem, -8rem);
+}
+
+.h2-register-1 {
+	transform: translateY(-4.5rem);
+}
+
+.paragraph-lato-register {
+	font-family: "Lato", sans-serif;
+	color: #777;
+	font-size: 1.6rem;
+	letter-spacing: 2.5%;
+	transform: translate(5rem, -8rem);
+}
+
+.form {
+	transform: translate(5rem, -8rem);
+}
+.form__input {
+	font-family: inherit;
+	color: inherit;
+	font-size: 1.8rem;
+	padding: 1.5rem 2rem;
+	border-radius: 30px;
+	background-color: #e5e5e5;
+	border: none;
+	border-bottom: 3px solid transparent;
+	width: 90%;
+	display: block;
+	transition: all 0.3s;
+}
+.form__input:focus {
+	outline: none;
+	box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.1);
+	border-bottom: 3px solid #55c57a;
+}
+.form__input:focus:invalid {
+	border-bottom: 3px solid #ff7730;
+}
+.form__input::-webkit-input-placeholder {
+	color: #999;
+}
+
+.form__radio-input {
+	height: 2rem;
+	width: 2rem;
+	margin-left: 1rem;
+}
+
+.form__radio-input-label {
+	font-size: 1.6rem;
+	font-weight: 600;
+	margin-bottom: 10rem;
+}
+
+.form__label {
+	font-size: 1.6rem;
+	font-weight: 700;
+	margin-left: 2rem;
+	margin-top: 0.7rem;
+	display: block;
+	transition: all 0.5s;
+}
+
+.form__input:placeholder-shown + .form__label {
+	opacity: 0;
+	visibility: hidden;
+	transform: translateY(-4rem);
 }
 
 .footer {

@@ -1,1 +1,101 @@
-<%-include("layout/header") -%> <%-include("layout/footer") -%>
+<%-include("layout/header-login") -%>
+
+<section class="section__register">
+    <div class="row">
+        <div class="col-1-of-2">
+            <img
+                src="img/register.png"
+                alt="undraw_work_together_h631"
+                class="img-register "
+            />
+            
+            <h2 class="heading-secondary h2-register-1">
+               Travaillons ensemble !
+            </h3>
+           
+        </div>
+        <div class="col-1-of-2">
+            <h2 class="heading-secondary u-margin-bottom-small h2-register">
+                Créer un compte
+            </h3>
+
+            <p class="paragraph-lato-register u-margin-bottom-medium">
+                Pour commencer à utiliser nos services, veuillez renseigner votre adresse <br>e-mail et configurer votre mot de passe
+            </p>
+
+            <form action="" class="form">
+               
+                <div class="form__group">
+                    <input
+                        type="text"
+                        name=""
+                        id=""
+                        class="form__input"
+                        placeholder="Nom"
+                        required
+                    />
+                    <label for="name" class="form__label">Nom</label>
+                </div>
+
+                <div class="form__group">
+                    <input
+                        type="text"
+                        name=""
+                        id=""
+                        class="form__input"
+                        placeholder="Prénom"
+                        required
+                    />
+                    <label for="name" class="form__label">Prénom</label>
+                </div>
+
+                <div class="form__group">
+                    <input
+                        type="email"
+                        name=""
+                        id=""
+                        class="form__input"
+                        placeholder="Adresse e-mail"
+                        required
+                    />
+                    <label for="email" class="form__label">  Adresse e-mail</label>
+                </div>
+
+                <div class="form__group">
+                    <input
+                        type="password"
+                        name=""
+                        id=""
+                        class="form__input"
+                        placeholder="Mot de passe"
+                        required
+                    />
+                    <label for="email" class="form__label u-margin-bottom-medium">  Mot de passe</label>
+                </div>
+                <!-- <div class="row">
+                    <div class="form__radio-group">
+                        <input
+                            type="radio"
+                            class="form__radio-input"
+                            name="size"
+                            id="remember"
+                        />
+                        <label for="small" class="form__radio-input-label" style="margin-right: 1rem;">
+                            
+                            Se souvenir de moi</label
+                        > -->
+
+                        <div>
+                            <a href="" class="btn btn--red btn--animated">Inscription</a>
+                            <a href="" class="btn btn--blue btn--animated">J'ai déjà un compte</a>
+                            
+                        </div>
+                    </div>
+                </div>
+                
+        </div>
+    </div>
+    
+</section>
+
+<%-include("layout/footer") -%>
