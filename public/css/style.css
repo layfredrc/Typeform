@@ -361,6 +361,10 @@ header {
 	object-fit: cover;
 }
 
+.section__workspace {
+	height: 100vh;
+}
+
 .form {
 	transform: translate(5rem, -8rem);
 }

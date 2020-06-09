@@ -13,6 +13,10 @@
 			{
 				"source": "/login",
 				"function": "app"
+			},
+			{
+				"source": "/workspace",
+				"function": "app"
 			}
 		],
 		"ignore": ["firebase.json", "**/.*", "**/node_modules/**"]

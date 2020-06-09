@@ -12,71 +12,86 @@
 			<h2 class="heading-secondary u-margin-bottom-medium">
 				Connexion
 			</h2>
+			<form action="/login" id="login-form" method="POST">
+				<div class="form__group">
+					<input
+						type="email"
+						name="login-email"
+						id="login-email"
+						class="form__input"
+						placeholder="Adresse e-mail"
+						style="margin-left: 2rem;"
+						required
+					/>
+					<label
+						for="login-email"
+						class="form__label u-center-text"
+						style="margin-left: 0;"
+					>
+						Adresse e-mail</label
+					>
+				</div>
 
-			<div class="form__group">
-				<input
-					type="email"
-					name=""
-					id=""
-					class="form__input"
-					placeholder="Adresse e-mail"
-					style="margin-left: 2rem;"
-					required
-				/>
-				<label
-					for="email"
-					class="form__label u-center-text"
-					style="margin-left: 0;"
-				>
-					Adresse e-mail</label
-				>
-			</div>
+				<div class="form__group">
+					<input
+						type="password"
+						name="login-password"
+						id="login-password"
+						class="form__input"
+						placeholder="Mot de passe"
+						required
+						style="margin-left: 2rem;"
+					/>
+					<label for="email" class="form__label" style="margin-left: 0;">
+						Mot de passe</label
+					>
+				</div>
 
-			<div class="form__group">
-				<input
-					type="password"
-					name=""
-					id=""
-					class="form__input"
-					placeholder="Mot de passe"
-					required
-					style="margin-left: 2rem;"
-				/>
-				<label for="email" class="form__label" style="margin-left: 0;">
-					Mot de passe</label
-				>
-			</div>
+				<div class="form__radio-group">
+					<input
+						type="checkbox"
+						class="form__radio-input"
+						name="size"
+						id="remember"
+					/>
 
-			<div class="form__radio-group">
-				<input
-					type="checkbox"
-					class="form__radio-input"
-					name="size"
-					id="remember"
-				/>
+					<label
+						for="small"
+						class="form__radio-input-label"
+						style="margin-right: 3.5rem;"
+					>
+						Se souvenir de moi</label
+					>
+					<label
+						for="small"
+						class="form__radio-input-label"
+						style="margin-left: 1.5rem;"
+					>
+						Mot de passe oublié?</label
+					>
+				</div>
 
-				<label
-					for="small"
-					class="form__radio-input-label"
-					style="margin-right: 3.5rem;"
-				>
-					Se souvenir de moi</label
-				>
-				<label
-					for="small"
-					class="form__radio-input-label"
-					style="margin-left: 1.5rem;"
-				>
-					Mot de passe oublié?</label
-				>
-			</div>
-
-			<div style="margin-top: 4rem;">
-				<a href="/login" class="btn btn--red btn--animated">Connexion</a>
-				<a href="/register" class="btn btn--blue btn--animated">Je m'inscris</a>
-			</div>
+				<div style="margin-top: 4rem;">
+					<button type="submit" class="btn btn--red btn--animated">
+						Connexion
+					</button>
+					<a href="" class="btn btn--blue btn--animated" id="logout"
+						>Je m'inscris</a
+					>
+				</div>
+			</form>
 		</div>
 	</div>
 </section>
+
+<!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
+<!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+<script src="/__/firebase/7.15.0/firebase-app.js"></script>
+
+<!-- Add Firebase products that you want to use -->
+<script src="/__/firebase/7.15.0/firebase-auth.js"></script>
+<script src="/__/firebase/7.15.0/firebase-firestore.js"></script>
+<script src="/__/firebase/init.js"></script>
+<script src="js/auth.js"></script>
 
 <%-include("layout/footer") -%>

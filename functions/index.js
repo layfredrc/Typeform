@@ -3,8 +3,7 @@ const firebase = require("firebase-admin");
 const express = require("express");
 const path = require("path");
 const ejs = require("ejs");
-
-// const firebaseApp = firebase.initializeApp(functions.config().firebase);
+// const auth = require(__dirname + "/auth.js");
 
 const app = express();
 
@@ -21,4 +20,18 @@ app.get("/register", (req, res) => {
 app.get("/login", (req, res) => {
 	res.render("login", {});
 });
+
+app.get("/workspace", (req, res) => {
+	res.render("workspace", {});
+});
+app.post("/login", (req, res) => {
+	res.redirect("/workspace");
+});
+
+app.post("/register", (req, res) => {
+	const fName = req.body.firstName;
+	const lName = req.body.lastName;
+	console.log(fName, lName);
+});
+
 exports.app = functions.https.onRequest(app);

@@ -23,12 +23,12 @@
                 Pour commencer à utiliser nos services, veuillez renseigner votre adresse <br>e-mail et configurer votre mot de passe
             </p>
 
-            <form action="POST" class="form" id="signup-form">
+            <form action="/workspace" class="form" id="signup-form" method="POST">
                
                 <div class="form__group">
                     <input
                         type="text"
-                        name=""
+                        name="firstName"
                         id="firstName"
                         class="form__input"
                         placeholder="Nom"
@@ -41,7 +41,7 @@
                     <input
                         type="text"
                         name="lastName"
-                        id=""
+                        id="lastName"
                         class="form__input"
                         placeholder="Prénom"
                         required
@@ -52,8 +52,8 @@
                 <div class="form__group">
                     <input
                         type="email"
-                        name="email"
-                        id=""
+                        name="signup-email"
+                        id="signup-email"
                         class="form__input"
                         placeholder="Adresse e-mail"
                         required
@@ -64,8 +64,8 @@
                 <div class="form__group">
                     <input
                         type="password"
-                        name="password"
-                        id=""
+                        name="signup-password"
+                        id="signup-password"
                         class="form__input"
                         placeholder="Mot de passe"
                         required
@@ -74,13 +74,13 @@
                 </div>
                
                         <div>
-                            <button type="submit" class="btn btn--red btn--animated">Inscription</button>
+                            <button type="submit" class="btn btn--red btn--animated" id="btnSignUp">Inscription</button>
                             <a href="/login" class="btn btn--blue btn--animated">J'ai déjà un compte</a>
                             
                         </div>
                     </div>
                 </div>
-                
+            </form>
         </div>
     </div>
     
@@ -88,30 +88,14 @@
 
 
 
+<!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
+  <!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+  <script src="/__/firebase/7.15.0/firebase-app.js"></script>
 
+  <!-- Add Firebase products that you want to use -->
+  <script src="/__/firebase/7.15.0/firebase-auth.js"></script>
+  <script src="/__/firebase/7.15.0/firebase-firestore.js"></script>
+  <script src="/__/firebase/init.js"></script>
+  <script src="js/auth.js"></script>
 
-<script>
-  // Your web app's Firebase configuration
-  var firebaseConfig = {
-    apiKey: "AIzaSyCZG_2obib1kupcU2QeYRqTMNFwgzGRSPI",
-    authDomain: "typeform-28c45.firebaseapp.com",
-    databaseURL: "https://typeform-28c45.firebaseio.com",
-    projectId: "typeform-28c45",
-    storageBucket: "typeform-28c45.appspot.com",
-    messagingSenderId: "877256869961",
-    appId: "1:877256869961:web:084ff01c5c9b5e6f0c5798",
-    measurementId: "G-C1SVG56ZYJ"
-  };
-  // Initialize Firebase
-  firebase.initializeApp(firebaseConfig);
-
-  // references
-  const auth = firebase.auth();
-  const db = firbase.firestore();
-
-  // update firestore settings
-  db.settings({timestampsInSnapshots: true});
-
-</script>
-<script src="../auth.js"></script>
 <%-include("layout/footer") -%>
