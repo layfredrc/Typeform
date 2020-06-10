@@ -3,16 +3,13 @@ const auth = firebase.auth();
 const db = firebase.firestore();
 
 // listen for auth state changes
-auth.onAuthStateChanged((user) => {
-	if (user) {
-		alert("user logged in :", user);
-		console.log("user logged in :", user);
-		window.location.href = "/workspace";
-	} else {
-		alert("user logged out:", user);
-		console.log("user is logged out");
-	}
-});
+// auth.onAuthStateChanged((user) => {
+// 	if (user) {
+// 		console.log("user logged in :", user);
+// 	} else {
+// 		console.log("user is logged out");
+// 	}
+// });
 
 const signupForm = document.querySelector("#signup-form");
 signupForm.addEventListener("submit", (e) => {

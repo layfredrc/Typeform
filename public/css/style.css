@@ -170,6 +170,7 @@ body {
 .navigation__list:hover {
 	transform: scale(1.15);
 }
+
 button {
 	font-family: "Monserrat", sans-serif;
 	font-size: 1.6rem;
